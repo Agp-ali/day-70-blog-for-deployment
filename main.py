@@ -36,8 +36,7 @@ This will install the packages from the requirements.txt for this project.
 '''
 
 
-app = Flask(__name__, template_folder=os.path.join(os.path.dirname(__file__), 'templates'),
-             static_folder=os.path.join(os.path.dirname(__file__), 'static'))
+app = Flask(__name__, template_folder="templates", static_folder="static")
 
 app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY')
 ckeditor = CKEditor(app)
@@ -319,4 +318,4 @@ def test():
 
 
 if __name__ == "__main__":
-    app.run(debug=False, port=5001)
+    app.run(debug=False, port=10000)
