@@ -307,5 +307,14 @@ def send_email(name, email, phone, message):
         connection.sendmail(MAIL_ADDRESS, MAIL_ADDRESS, email_message)
 
 
+
+
+
+@app.route('/test')
+def test():
+    return "Test route working"
+
+
+
 if __name__ == "__main__":
     app.run(debug=False, port=5001)
